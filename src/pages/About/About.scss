@@ -1,0 +1,71 @@
+@import '../../scss/color';
+@import "../../scss/PageSize";
+@import "../../scss/Mixin";
+
+.about-container {
+  width: 100%;
+  display: flex;
+  height: $page-height;
+  max-height: $max-page-height;
+  overflow-x: hidden;
+  margin-top: 20px;
+  @include mobile {
+    flex-direction: column-reverse;
+    max-height: unset;
+    height: unset;
+  }
+
+  .about-content-area {
+    width: 50%;
+    color: $primary-color;
+    padding: 22px 140px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #eeeeee50;
+    @include mobile {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .about-content-title {
+      font-size: 40px;
+      font-weight: bold;
+      @include mobile {
+        font-size: 30px;
+        font-weight: 500;
+      }
+    }
+
+    .about-content {
+      margin: 0px;
+      font-family: 'Poiret One', cursive;
+      font-weight: 600;
+      line-height: 1.75rem;
+      color: $secondary-color;
+      margin-bottom: 40px;
+    }
+  }
+
+  .about-image-area {
+    width: 50%;
+    height: $page-height;
+    max-height: $max-page-height;
+    background-image: url("../../assets/about.png");
+    background-size: cover;
+    box-sizing: border-box;
+    @include mobile {
+      display: none;
+    }
+  }
+
+  img {
+    display: none;
+    width: 100%;
+    height: auto;
+    @include mobile {
+      display: block;
+    }
+  }
+}

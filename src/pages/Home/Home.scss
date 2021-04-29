@@ -1,0 +1,79 @@
+@import "../../scss/color";
+@import "../../scss/PageSize";
+@import "../../scss/Mixin";
+
+.home-container {
+  padding: 32px 80px;
+  width: 100vw;
+  height: $page-height;
+  max-height: $max-page-height;
+  box-sizing: border-box;
+  display: flex;
+  @include mobile {
+    flex-direction: column-reverse;
+    padding: 0;
+    height: unset;
+  }
+
+  .home-title-area {
+    width: 50%;
+    padding: 80px;
+    color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    @include mobile {
+      width: 100%;
+      padding: 32px 20px;
+    }
+
+    .home-title {
+      font-size: 72px;
+      font-weight: bold;
+      margin: 0;
+      @include mobile {
+        font-size: 28px;
+      }
+    }
+
+    .home-sub-title {
+      font-family: 'Poiret One', cursive;
+      font-size: 20px;
+      font-weight: bold;
+      color: $secondary-color;
+    }
+  }
+
+  .home-background-area {
+    width: 50%;
+    overflow: hidden;
+    @include mobile {
+      width: 100%;
+    }
+
+    .home-background-image {
+      height: $page-height;
+      width: 50vw;
+      max-height: $max-page-height;
+      background-image: url("../../assets/home.png");
+      background-attachment: fixed;
+      background-position: calc(90vw / 2);
+      background-size: 50vw;
+      background-repeat: no-repeat;
+      @include mobile {
+        display: none;
+      }
+    }
+
+    img {
+      display: none;
+      @include mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 22px;
+      }
+    }
+  }
+}
