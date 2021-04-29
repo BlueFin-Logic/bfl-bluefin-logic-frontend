@@ -1,0 +1,30 @@
+@import "../../../scss/color";
+
+.hamburger-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  div {
+    width: 100%;
+    height: 3px;
+    background-color: $secondary-color;
+    border-radius: 3px;
+    transition: 300ms;
+    transform-origin: right;
+  }
+
+  .top-active {
+    transform: rotate(-45deg);
+  }
+
+  .middle-active {
+    display: none;
+  }
+
+  .bottom-active {
+    transform: rotate(45deg);
+  }
+}

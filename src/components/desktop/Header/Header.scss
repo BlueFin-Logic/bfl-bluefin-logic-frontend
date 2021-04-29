@@ -1,0 +1,26 @@
+@import "../../../scss/color";
+@import "../../../scss/Mixin";
+
+.header-container {
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+
+  .header-logo {
+    color: $secondary-color;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .header-separator {
+    margin-top: 22px;
+    background-color: $secondary-color;
+    height: 1px;
+    border: 0;
+    width: 940px;
+    @include mobile {
+      display: none;
+    }
+  }
+}

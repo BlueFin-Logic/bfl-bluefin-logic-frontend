@@ -1,0 +1,63 @@
+@import '../../scss/PageSize';
+@import "../../scss/color";
+@import "../../scss/Mixin";
+
+.quote-container {
+  width: 100vw;
+  height: $page-height;
+  max-height: $max-sm-page-height;
+  background-color: $background-pages;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mobile {
+    height: unset;
+    max-height: unset;
+    flex-direction: column;
+  }
+
+  .quote-content-area {
+    width: 50%;
+    text-align: right;
+    margin-right: 40px;
+    @include mobile {
+      width: 100%;
+      text-align: left;
+      margin-right: unset;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .quote-content {
+      font-weight: 500;
+      font-size: 22px;
+      color: $secondary-color;
+    }
+
+    .quote-author {
+      font-weight: 200;
+      color: $secondary-color;
+      font-size: 20px;
+    }
+  }
+
+  .quote-image-area {
+    width: 50%;
+    margin-left: 40px;
+    img {
+      width: 460px;
+      height: auto;
+      border-radius: 3px;
+      box-shadow: 20px 20px $secondary-color;
+    }
+    @include mobile {
+      width: 100%;
+      margin-left: 10px;
+
+      img {
+        width: calc(100% - 20px);
+        box-shadow: 10px 10px $secondary-color;
+      }
+    }
+  }
+}

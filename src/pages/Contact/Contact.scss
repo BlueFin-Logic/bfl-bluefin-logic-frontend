@@ -1,0 +1,59 @@
+@import "../../scss/color";
+@import "../../scss/PageSize";
+@import "../../scss/Mixin";
+
+.contact-container {
+  width: 100%;
+  display: flex;
+  height: $page-height;
+  max-height: $max-page-height;
+  padding: 0 80px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  overflow: hidden;
+  @include mobile {
+    height: unset;
+    max-height: unset;
+    flex-direction: column;
+    padding: unset;
+  }
+
+  .contact-image-area {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 3px;
+
+    .img-desktop {
+      width: 100%;
+      height: auto;
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .img-mobile {
+      display: none;
+      @include mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .contact-form-area {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mobile {
+      padding: 0 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
